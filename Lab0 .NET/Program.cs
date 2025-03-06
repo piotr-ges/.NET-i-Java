@@ -14,9 +14,9 @@
         {
             for(int i = 1; i <= upperLim; i++)
             {
-                if (i % 3 == 0)
+                if (i % 5 == 0 && i % 3 == 0)
                 {
-                    Console.WriteLine("Fizz");
+                    Console.WriteLine("FizzBuzz");
                 }
 
                 else if (i % 5 == 0)
@@ -24,9 +24,9 @@
                     Console.WriteLine("Buzz");
                 }
 
-                else if (i % 5 == 0 && i % 3 == 0)
+                else if (i % 3 == 0)
                 {
-                    Console.WriteLine("FizzBuzz");
+                    Console.WriteLine("Fizz");
                 }
 
                 else
@@ -40,7 +40,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Podaj górny zakres liczb");
+            int range = 20;
+            FizzBuzz fizz_buzz = new FizzBuzz(range);
+            fizz_buzz.PrintNum();
         }
     }
 }
